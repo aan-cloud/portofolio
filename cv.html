@@ -1,91 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/inter/3.19.3/inter.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2D3748;
+            --secondary-color: #4A5568;
+            --accent-color: #4299E1;
+            --background-color: #FFFFFF;
+            --section-bg: #F7FAFC;
+            --text-color: #1A202C;
+            --light-text: #718096;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 40px;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
 
         .header {
-            text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            margin: 0;
-            color: #2c3e50;
-            font-size: 24px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
         }
 
         .contact-info {
-            text-align: center;
-            margin: 10px 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
             font-size: 14px;
+            color: var(--secondary-color);
         }
 
         .contact-info a {
-            color: #3498db;
+            color: var(--accent-color);
             text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
         }
 
         h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 20px;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #EDF2F7;
+            letter-spacing: -0.3px;
         }
 
         .section {
-            margin: 15px 0;
+            margin: 25px 0;
+            padding: 20px;
+            background: var(--section-bg);
+            border-radius: 8px;
         }
 
         .job-title {
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary-color);
+            margin-bottom: 4px;
         }
 
         .company-info {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 5px;
+            font-size: 14px;
+            color: var(--light-text);
+            margin-bottom: 10px;
         }
 
         ul {
-            margin: 5px 0;
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin: 10px 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 15px 0;
         }
 
         .skill-category {
+            font-weight: 600;
+            color: var(--primary-color);
             margin-bottom: 5px;
-            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .skills-content {
+            font-size: 14px;
+            color: var(--secondary-color);
+            line-height: 1.6;
         }
 
         .project-links {
-            font-size: 14px;
-            color: #666;
+            font-size: 13px;
+            color: var(--accent-color);
+            margin: 5px 0;
         }
 
         .project-tech {
-            font-style: italic;
-            color: #666;
-            margin: 5px 0;
+            font-size: 13px;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            font-size: 15px;
+            color: var(--secondary-color);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+            
+            a {
+                text-decoration: none;
+            }
         }
     </style>
 </head>
@@ -93,67 +165,69 @@
     <div class="header">
         <h1>MUHAMMAD FARHAN</h1>
         <div class="contact-info">
-            Kuala Lumpur, Malaysia | +60 177671526 | aancloud.com@gmail.com<br>
-            <a href="https://github.com/aan-cloud">Github</a> | 
-            <a href="https://www.linkedin.com/in/muhammad-farhan-569018185/">LinkedIn</a> | 
+            <span>Kuala Lumpur, Malaysia</span>
+            <span>+60 177671526</span>
+            <span>aancloud.com@gmail.com</span>
+            <a href="https://github.com/aan-cloud">Github</a>
+            <a href="https://www.linkedin.com/in/muhammad-farhan-569018185/">LinkedIn</a>
             <a href="#">Portfolio</a>
         </div>
     </div>
 
-    <div class="section">
+    <section class="section">
         <h2>PROFESSIONAL SUMMARY</h2>
-        <p>Detail-oriented Full Stack Developer with strong expertise in React and Node.js ecosystems. Passionate about building scalable web applications with focus on performance optimization and security. Demonstrated ability to deliver high-impact projects through effective problem-solving and collaboration.</p>
-    </div>
+        <p class="summary">Detail-oriented Full Stack Developer with strong expertise in React and Node.js ecosystems. Self-taught programmer currently pursuing Computer Science degree. Passionate about building scalable web applications with focus on performance optimization and security. Demonstrated ability to deliver high-impact projects through effective problem-solving and collaboration.</p>
+    </section>
 
-    <div class="section">
+    <section class="section">
         <h2>EDUCATION</h2>
-        <div class="job-title">Computer Science</div>
-        <div class="company-info">2019 - 2023</div>
+        <div class="job-title">Computer Science Student (2nd Semester)</div>
+        <div class="company-info">Expected Graduation: 2027</div>
         <ul>
-            <li>GPA: X.XX/4.00</li>
-            <li>Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development</li>
+            <li>Currently studying Data Structures, Algorithms, and Programming Fundamentals</li>
+            <li>Active member of campus coding community</li>
         </ul>
 
-        <div class="job-title">Software Engineering Bootcamp</div>
+        <div class="job-title" style="margin-top: 20px;">Software Engineering Bootcamp</div>
         <div class="company-info">Bearmentor Bandung, Indonesia | 2022</div>
         <ul>
             <li>Completed intensive training in full-stack development and system design</li>
             <li>Developed 3 production-ready applications using modern tech stack</li>
             <li>Achieved top 5 position in final project showcase</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
         <h2>TECHNICAL SKILLS</h2>
         <div class="skills-grid">
             <div>
-                <div class="skill-category">Programming Languages:</div>
-                JavaScript/TypeScript, SQL, HTML5, CSS3
+                <div class="skill-category">Programming Languages</div>
+                <div class="skills-content">JavaScript/TypeScript, SQL, HTML5, CSS3</div>
             </div>
             <div>
-                <div class="skill-category">Frontend:</div>
-                React, React Router v6, Remix, Vite, Tailwind CSS
+                <div class="skill-category">Frontend</div>
+                <div class="skills-content">React, React Router v6, Remix, Vite, Tailwind CSS</div>
             </div>
             <div>
-                <div class="skill-category">Backend:</div>
-                Node.js, Express.js, Nest.js, Hono.js, RESTful APIs
+                <div class="skill-category">Backend</div>
+                <div class="skills-content">Node.js, Express.js, Nest.js, Hono.js, RESTful APIs</div>
             </div>
             <div>
-                <div class="skill-category">Database & ORM:</div>
-                PostgreSQL, Prisma, Redis
+                <div class="skill-category">Database & ORM</div>
+                <div class="skills-content">PostgreSQL, Prisma, Redis</div>
             </div>
             <div>
-                <div class="skill-category">DevOps & Tools:</div>
-                Docker, CI/CD, Git, GitHub Actions
+                <div class="skill-category">DevOps & Tools</div>
+                <div class="skills-content">Docker, CI/CD, Git, GitHub Actions</div>
             </div>
             <div>
-                <div class="skill-category">Testing:</div>
-                Jest, React Testing Library
+                <div class="skill-category">Testing</div>
+                <div class="skills-content">Jest, React Testing Library</div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
         <h2>PROJECTS</h2>
         <div class="job-title">TRUST - Automotive Spare Part Platform</div>
         <div class="project-links">Live | Github</div>
@@ -166,7 +240,7 @@
             <li>Managed project timeline and deliverables using GitHub Projects, achieving 90% on-time completion</li>
         </ul>
 
-        <div class="job-title">CheckCafe - Cafe Management System</div>
+        <div class="job-title" style="margin-top: 25px;">CheckCafe - Cafe Management System</div>
         <div class="project-links">Live | Github</div>
         <div class="project-tech">Full Stack Developer | React, Express.js, PostgreSQL</div>
         <ul>
@@ -176,9 +250,9 @@
             <li>Created admin dashboard with role-based access control and analytics</li>
             <li>Deployed application using Docker and implemented automated CI/CD pipeline</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
         <h2>PROFESSIONAL EXPERIENCE</h2>
         <div class="job-title">Systems Optimization Specialist</div>
         <div class="company-info">Industrial Quality Management Ltd. | Bukit Beruntung, MY | Oct 2022 – Nov 2024</div>
@@ -187,6 +261,6 @@
             <li>Implemented data collection and analysis system for production metrics</li>
             <li>Collaborated with cross-functional teams to optimize workflows and improve efficiency</li>
         </ul>
-    </div>
+    </section>
 </body>
 </html>
