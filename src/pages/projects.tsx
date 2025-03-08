@@ -45,7 +45,7 @@ const projects = [
 
 export function ProjectsPage() {
   return (
-    <div className="flex flex-row sm:flex-col sm:px-20 px-4 py-12 space-y-8">
+    <div className="flex sm:flex-col flex-col sm:px-20 px-4 py-12 space-y-8">
       <div className="space-y-2">
         <h1 className="text-4xl font-bold tracking-tight">My Projects</h1>
         <p className="text-muted-foreground">
@@ -54,7 +54,7 @@ export function ProjectsPage() {
       </div>
 
       <Tabs defaultValue="all" className="space-y-8">
-        <TabsList className="grid grid-cols-2 md:grid-cols-6 w-full">
+        <TabsList className="grid grid-cols-2 md:grid-cols-6 w-full h-fit">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="web">Web</TabsTrigger>
           <TabsTrigger value="mobile">Mobile</TabsTrigger>

@@ -58,7 +58,7 @@ const skills = {
 
 export function SkillsPage() {
   return (
-    <div className="flex sm:flex-col flex-row sm:px-20 px-4 py-12 space-y-8">
+    <div className="flex sm:flex-col flex-col sm:px-20 px-4 py-12 space-y-8">
       <div className="space-y-2">
         <h1 className="text-4xl font-bold tracking-tight">My Skills</h1>
         <p className="text-muted-foreground">
@@ -67,7 +67,7 @@ export function SkillsPage() {
       </div>
 
       <Tabs defaultValue="frontend" className="space-y-8">
-        <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full">
+        <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full h-fit">
           <TabsTrigger value="frontend">Frontend</TabsTrigger>
           <TabsTrigger value="backend">Backend</TabsTrigger>
           <TabsTrigger value="tools">Tools</TabsTrigger>
@@ -112,21 +112,21 @@ export function SkillsPage() {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">Bachelor of Science in Computer Science</h3>
-              <p className="text-muted-foreground">University of Technology, 2016-2020</p>
+              <p className="text-muted-foreground">Asian Cyber University, 2024-2027</p>
             </CardContent>
           </Card>
           
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">AWS Certified Developer</h3>
-              <p className="text-muted-foreground">Amazon Web Services, 2022</p>
+              <p className="text-muted-foreground">Amazon Web Services, 2024</p>
             </CardContent>
           </Card>
           
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">Professional Scrum Master I</h3>
-              <p className="text-muted-foreground">Scrum.org, 2021</p>
+              <p className="text-muted-foreground">Scrum.org, 2025</p>
             </CardContent>
           </Card>
           
