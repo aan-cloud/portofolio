@@ -12,7 +12,7 @@ export function Footer() {
               <div className="relative h-8 w-8 overflow-hidden rounded-full bg-primary">
                 <Code className="absolute inset-0 h-full w-full p-1 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-gradient">AanPorto</span>
+              <span className="text-xl font-bold tracking-tight text-gradient">Farhan</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               A modern portfolio showcasing my work and skills as a developer.
