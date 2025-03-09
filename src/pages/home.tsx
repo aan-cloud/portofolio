@@ -125,7 +125,7 @@ export function HomePage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <Button asChild variant="outline" className="w-[50%]">
-                      <a href={`/projects/${index + 1}`}>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
                         View Project
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
