@@ -88,7 +88,7 @@ export function ContactPage() {
   }
 
   return (
-    <div className="flex flex-col sm:flex-row py-12 sm:px-20 px-4 space-y-12">
+    <div className="flex flex-col py-12 sm:px-20 px-4 space-y-12">
       <div className="space-y-2 text-center">
         <h1 className="text-4xl font-bold tracking-tight">Get in Touch</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
