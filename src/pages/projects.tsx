@@ -56,7 +56,7 @@ export function ProjectsPage() {
                         <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.tags.map((tag, i) => (
-                            <Badge key={i} variant="secondary">{tag}</Badge>
+                            <Badge key={i} variant="default">{tag}</Badge>
                           ))}
                         </div>
                         <div className="flex justify-between gap-4">
