@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -47,24 +48,47 @@ export function ContactPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    
+
+    try {
     // Simulate API call
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
-      form.reset();
+    const templateParam = {
+      name: values.name,
+      message: values.message,
+      email: values.email,
+      subject: values.subject
+    };
+
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+
+    await emailjs.send(
+      serviceId,
+      templateId,
+      templateParam,
+      {
+        publicKey: publicKey,
+      }
+    );
+
+    console.log(values);
+    setIsSubmitting(false);
+    form.reset();
       
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-    }, 1500);
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    });
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
   }
 
   return (
-    <div className="flex flex-row sm:flex-col py-12 sm:px-20 px-4 space-y-12">
+    <div className="flex flex-col sm:flex-row py-12 sm:px-20 px-4 space-y-12">
       <div className="space-y-2 text-center">
         <h1 className="text-4xl font-bold tracking-tight">Get in Touch</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">

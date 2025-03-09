@@ -3,16 +3,14 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { projects } from "@/data/projects";
 import { 
   ArrowRight, 
   Code,
   Mail, 
   Github, 
   Linkedin, 
-  Twitter,
-  Cpu,
-  Globe,
-  Smartphone,
+  Twitter
   
 } from "lucide-react";
 
@@ -99,38 +97,7 @@ export function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-              {
-                id: 1,
-                title: "Trust - E-Commerce Platform",
-                description: "A modern e-commerce platform built with React and Node.js. Features include product listings, cart functionality, user authentication, and payment processing.",
-                image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                tags: ["React", "Node.js", "Postgresql", "Stripe"],
-                category: "web",
-                icon: <Globe className="h-10 w-10 text-primary" />,
-                link: "https://github.com/aan-cloud/trust-frontend"
-              },
-              {
-                id: 2,
-                title: "Checkcafe",
-                description: "A productivity app for managing cafe. Users can create a place of cafe, set features, and track location using interactive map.",
-                image: "https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg",
-                tags: ["React", "Firebase", "Tailwind", "Hono.js"],
-                category: "web",
-                icon: <Smartphone className="h-10 w-10 text-secondary" />,
-                link: "https://github.com/checkcafe/checkcafe"
-              },
-              {
-                id: 3,
-                title: "Watchall - Streaming film",
-                description: "A streaming film platform designed using a robust microservices architecture and a complex streamlined system to ensure high performance and scalability. It offers features similar to Netflix, including seamless content delivery, personalized recommendations, and a highly efficient distribution network.",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8mq2cnidNUr0thrOpFo-bh1p_fCrLmxzXVQ&s",
-                tags: ["Kotlin", "Spring", "Junit", "AWS"],
-                category: "mobile",
-                icon: <Cpu className="h-10 w-10 text-accent" />,
-                link: "https://github.com/aan-cloud/watchall"
-              },
-          ].map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -153,15 +120,23 @@ export function HomePage() {
                   <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, i) => (
-                      <Badge key={i} variant="secondary">{tag}</Badge>
+                      <Badge key={i} variant="default">{tag}</Badge>
                     ))}
                   </div>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to={`/projects/${index + 1}`}>
-                      View Project
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                  <div className="flex justify-between gap-4">
+                    <Button asChild variant="outline" className="w-[50%]">
+                      <a href={`/projects/${index + 1}`}>
+                        View Project
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="w-[50%]">
+                      <a href={project.live as string}>
+                        { project.live ? "Live" : "Soon"}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
