@@ -131,7 +131,7 @@ export function HomePage() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-[50%]">
-                      <a href={project.live as string}>
+                      <a href={project.live as string} target="_blank" rel="noopener noreferrer">
                         { project.live ? "Live" : "Soon"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>

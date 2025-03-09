@@ -61,13 +61,13 @@ export function ProjectsPage() {
                         </div>
                         <div className="flex justify-between gap-4">
                           <Button asChild variant="outline" className="w-[50%]">
-                            <a href={`/projects/${index + 1}`}>
+                            <a href={project.link}>
                               View Project
                               <ArrowRight className="ml-2 h-4 w-4" />
                             </a>
                           </Button>
                           <Button asChild variant="outline" className="w-[50%]">
-                            <a href={project.live as string}>
+                            <a href={project.live as string} target="_blank" rel="noopener noreferrer">
                               { project.live ? "Live" : "Soon"}
                               <ArrowRight className="ml-2 h-4 w-4" />
                             </a>
