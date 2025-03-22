@@ -33,4 +33,15 @@ export const projects = [
     icon: <Cpu className="h-10 w-10 text-accent" />,
     link: "https://github.com/aan-cloud/watchall"
   },
+  {
+    id: 4,
+    title: "Cheffest - Simple Food App",
+    description: " We craft delicious burgers with extra toppings and premium ingredients imported from New Zealand.",
+    image: "https://ucarecdn.com/fbbdd175-70e0-407a-83af-7d34351c4251/BlackandYellowSimpleMinimalistBurgerPromotionBanner.png",
+    tags: ["React Router", "Render", "Tailwind", "Hono.js"],
+    category: "web",
+    icon: <Smartphone className="h-10 w-10 text-secondary" />,
+    link: "https://github.com/aan-cloud/cheffest-web",
+    live: "https://cheffest-web.vercel.app/"
+  },
 ]
