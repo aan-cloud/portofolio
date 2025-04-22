@@ -5,7 +5,7 @@ export const projects = [
     id: 1,
     title: "Trust - E-Commerce Platform",
     description: "A modern e-commerce platform built with React and Node.js. Features include product listings, cart functionality, user authentication, and payment processing.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "https://ucarecdn.com/295403de-bab1-45d6-a8a7-54bfd0b59197/BlueYellowMinimalistFastFoodBannerPromotion.png",
     tags: ["React", "Node.js", "Postgresql", "Stripe"],
     category: "web",
     icon: <Globe className="h-10 w-10 text-primary" />,
