@@ -29,7 +29,7 @@ export function HomePage() {
             Full-Stack Developer
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            Hi, I'm <span className="text-gradient">Farhan</span>
+            Hi, I'm <span className="text-gradient">Muhammad Farhan</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl">
             I build modern, responsive web applications with cutting-edge technologies.
