@@ -27,7 +27,7 @@ export const projects = [
     id: 3,
     title: "Watchall - Streaming film",
     description: "A streaming film platform designed using a robust microservices architecture and a complex streamlined system to ensure high performance and scalability. It offers features similar to Netflix, including seamless content delivery, personalized recommendations, and a highly efficient distribution network.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8mq2cnidNUr0thrOpFo-bh1p_fCrLmxzXVQ&s",
+    image: "https://ucarecdn.com/52777e04-28cf-425f-bd2c-013d1f660304/RedBlackModernBoldCinemaClubPresentation.png",
     tags: ["Kotlin", "Spring", "Junit", "AWS"],
     category: "mobile",
     icon: <Cpu className="h-10 w-10 text-accent" />,
