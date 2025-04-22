@@ -16,7 +16,7 @@ export const projects = [
     id: 2,
     title: "Checkcafe",
     description: "A productivity app for managing cafe. Users can create a place of cafe, set features, and track location using interactive map.",
-    image: "https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg",
+    image: "https://ucarecdn.com/00d4b066-9ac4-4115-88a5-b7755896b3fc/BrownandWhiteOrganicCafeFacebookCover.png",
     tags: ["React", "Firebase", "Tailwind", "Hono.js"],
     category: "web",
     icon: <Smartphone className="h-10 w-10 text-secondary" />,
