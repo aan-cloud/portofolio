@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Cpu } from "lucide-react"
+import { Globe } from "lucide-react"
 
 export const projects = [
   {
@@ -19,7 +19,7 @@ export const projects = [
     image: "https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg",
     tags: ["React", "Firebase", "Tailwind", "Hono.js"],
     category: "web",
-    icon: <Smartphone className="h-10 w-10 text-secondary" />,
+    icon: <Globe className="h-10 w-10 text-primary" />,
     link: "https://github.com/checkcafe/checkcafe",
     live: "https://checkcafe.com"
   },
@@ -30,7 +30,7 @@ export const projects = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8mq2cnidNUr0thrOpFo-bh1p_fCrLmxzXVQ&s",
     tags: ["Kotlin", "Spring", "Junit", "AWS"],
     category: "mobile",
-    icon: <Cpu className="h-10 w-10 text-accent" />,
+    icon: <Globe className="h-10 w-10 text-primary" />,
     link: "https://github.com/aan-cloud/watchall"
   },
   {
@@ -40,7 +40,7 @@ export const projects = [
     image: "https://ucarecdn.com/fbbdd175-70e0-407a-83af-7d34351c4251/BlackandYellowSimpleMinimalistBurgerPromotionBanner.png",
     tags: ["React Router", "Render", "Tailwind", "Hono.js"],
     category: "web",
-    icon: <Smartphone className="h-10 w-10 text-secondary" />,
+    icon: <Globe className="h-10 w-10 text-primary" />,
     link: "https://github.com/aan-cloud/cheffest-web",
     live: "https://cheffest-web.vercel.app/"
   },

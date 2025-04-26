@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Twitter, Code } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -9,9 +9,6 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <Link to="/" className="flex items-center gap-2">
-              <div className="relative h-8 w-8 overflow-hidden rounded-full bg-primary">
-                <Code className="absolute inset-0 h-full w-full p-1 text-primary-foreground" />
-              </div>
               <span className="text-xl font-bold tracking-tight text-gradient">Farhan</span>
             </Link>
             <p className="text-sm text-muted-foreground">

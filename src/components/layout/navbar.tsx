@@ -20,9 +20,6 @@ export function Navbar() {
     <nav className="sticky top-0 sm:px-20 px-4 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="relative h-8 w-8 overflow-hidden rounded-full bg-primary">
-            <Code className="absolute inset-0 h-full w-full p-1 text-primary-foreground" />
-          </div>
           <span className="text-xl font-bold tracking-tight text-gradient">Farhan</span>
         </Link>
 
