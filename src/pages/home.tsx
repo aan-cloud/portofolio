@@ -18,16 +18,19 @@ export function HomePage() {
   return (
     <div className="px-4 gap-6 flex flex-col sm:px-20 py-12 w-full">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center space-y-8 py-12">
+      <section className="flex flex-col items-center justify-center text-center space-y-8 pt-0 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="space-y-4"
+          className="space-y-4 flex flex-col justify-center items-center"
         >
+          <div className="sm:size-96 size-48 flex justify-center">
+            <img src="https://ucarecdn.com/9e59f77f-db92-4fc6-b430-eb8359dffc0e/60821454679799092561.jpg" alt="Profile Picture" className="object-cover rounded-full" />
+          </div>
           <Badge variant="outline" className="px-4 py-1 text-sm">
             Full-Stack Developer
-          </Badge>
+          </Badge> 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Hi, I'm <span className="text-gradient">Muhammad Farhan</span>
           </h1>
