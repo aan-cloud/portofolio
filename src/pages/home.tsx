@@ -64,7 +64,7 @@ export function HomePage() {
           className="flex gap-4"
         >
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com/aan-cloud" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mhmdd-farhan" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </a>
