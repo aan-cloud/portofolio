@@ -10,8 +10,8 @@ import {
   Mail, 
   Github, 
   Linkedin, 
-  Twitter
-  
+  Twitter,
+  Newspaper
 } from "lucide-react";
 
 export function HomePage() {
@@ -79,6 +79,12 @@ export function HomePage() {
             <a href="https://www.threads.net/@mhmdd_frhnn" target="_blank" rel="noopener noreferrer">
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="https://cv.muhammad-farhan.com" target="_blank" rel="noopener norefferer">
+              <Newspaper className="h-5 w-5" />
+              <span className="sr-only">CV</span>
             </a>
           </Button>
         </motion.div>
